@@ -30,15 +30,15 @@ echo -e "${CYAN}╚════════════════════�
 
 if [[ -f "$NAME_FILE" ]]; then
 OLD_NAME=$(<"$NAME_FILE")
-echo -e "${WHITE} Prompt untuk PS1 \c"
-echo -e "${YELLOW} Nickname tersimpan: ${GREEN}$OLD_NAME${YELLOW}):\c"
-echo -e "${NC}Apakah ada ingin mengganti Nickname ?\n ${PURPLE} NickName New: ${NC} \c"
+echo -e "${WHITE}* Prompt untuk PS1 *\n"
+echo -e "${YELLOW} NickName Tersimpan: ${GREEN}$OLD_NAME${YELLOW}):\n"
+echo -e "${NC}Apakah ada ingin mengganti NickName ,jika tidak lanjut Enter saja ?\n ${PURPLE} NickName New: ${NC} \c"
 read -r USER_NAME
 if [[ -z "$USER_NAME" ]]; then
 USER_NAME="$OLD_NAME"
 fi
 else
-echo -e "${GREEN}Masukkan NickName untuk ditampilkan di PS1:${NC} \c"
+echo -e "${GREEN}Buat NickName untuk ditampilkan di PS1:${NC} \c"
 echo -e " NickName :${CYAN} \c"
 echo -e "${NC}\c"
 read -r USER_NAME
