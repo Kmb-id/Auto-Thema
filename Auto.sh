@@ -23,7 +23,7 @@ NC='\033[0m'
 
 clear
 echo -e "${CYAN}╔════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   TERMUX BANNER INSTALLER v2.0    ║${NC}"
+echo -e "${CYAN}║   TERMUX BANNER INSTALLER v2.0     ║${NC}"
 echo -e "${CYAN}╚════════════════════════════════════╝${NC}\n"
 
 # Input nama
@@ -38,7 +38,9 @@ if [[ -z "$USER_NAME" ]]; then
 USER_NAME="$OLD_NAME"
 fi
 else
-echo -e "${GREEN}Masukkan nama untuk ditampilkan di PS1:${NC} \c"
+echo -e "${GREEN}Masukkan NickName untuk ditampilkan di PS1:${NC} \c"
+echo -e " NickName :${CYAN} \c"
+echo -e "${NC}\c"
 read -r USER_NAME
 fi
 
