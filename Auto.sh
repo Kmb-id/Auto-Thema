@@ -10,14 +10,36 @@ mkdir -p "$(dirname "$BANNER_FILE")"
 # ==== Input nama tiap kali run ====
 NAME_FILE="${HOME}/.config/termux-name.txt"
 
+# Warna untuk prompt
+
+RED='\033[1;91m'
+GREEN='\033[1;92m'
+YELLOW='\033[1;93m'
+BLUE='\033[1;94m'
+PURPLE='\033[1;95m'
+CYAN='\033[1;96m'
+WHITE='\033[1;97m'
+NC='\033[0m'
+
+clear
+echo -e "${CYAN}╔════════════════════════════════════╗${NC}"
+echo -e "${CYAN}║   TERMUX BANNER INSTALLER v2.0    ║${NC}"
+echo -e "${CYAN}╚════════════════════════════════════╝${NC}\n"
+
+# Input nama
+
 if [[ -f "$NAME_FILE" ]]; then
-  OLD_NAME=$(<"$NAME_FILE")
-  read -rp "\e[95m Masukkan nama baru \e[90m(ENTER untuk tetap pakai: $OLD_NAME):\e[1;33m " USER_NAME
-  if [[ -z "$USER_NAME" ]]; then
-    USER_NAME="$OLD_NAME"
-  fi
+OLD_NAME=$(<"$NAME_FILE")
+echo -e "${WHITE} Prompt untuk PS1 \c"
+echo -e "${YELLOW} Nickname tersimpan: ${GREEN}$OLD_NAME${YELLOW}):\c"
+echo -e "${NC}Apakah ada ingin mengganti Nickname ?\n ${PURPLE} NickName New: ${NC} \c"
+read -r USER_NAME
+if [[ -z "$USER_NAME" ]]; then
+USER_NAME="$OLD_NAME"
+fi
 else
-  read -rp "\e[1;92m Masukkan nama untuk ditampilkan di PS1:\e[1;94m " USER_NAME
+echo -e "${GREEN}Masukkan nama untuk ditampilkan di PS1:${NC} \c"
+read -r USER_NAME
 fi
 
 echo "$USER_NAME" > "$NAME_FILE"
