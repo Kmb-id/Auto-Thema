@@ -46,7 +46,7 @@ fi
 echo "$USER_NAME" > "$NAME_FILE"
 
 cat > "$BANNER_FILE" <<'EOF'
- ~/.config/termux-banner.sh
+# ~/.config/termux-banner.sh
 # Prints a random colorful ASCII banner on interactive shells.
 
 case $- in
