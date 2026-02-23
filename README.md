@@ -12,25 +12,25 @@ chmod +x *
 ```
 - Running 
 ```
-./Auto.sh 
+bashAuto.sh 
 ```
 atau
 ```
-bash Auto.sh
+./Auto.sh
 ```
 - Hasilnya setiap buka termux tampilan akan berubah-ubah (random) 
 # Cara Hapus installation script
 - 1
   ```
-  cd ~;rm -f Auto-Thema
+  cd ~;rm -rf Auto-Thema
   ```
 - 2
   ```
-  cd ~;rm -f .bashrc
+  cd ~;rm -rf .bashrc
   ```
 - 3
   ```
-  cd ~/.config;rm -f termux-banner.sh termux-name. txt
+  cd ~/.config;rm -rf termux-banner.sh termux-name. txt
   ```
 
 # Gabut
