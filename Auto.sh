@@ -23,9 +23,9 @@ NC='\033[0m'
 
 clear
 echo -e "${CYAN}╔════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   TERMUX THEMA STYLING V 0.3    ║${NC}"
+echo -e "${CYAN}║  ⚙️ TERMUX THEMA STYLING V 0.3  🛠️  ║${NC}"
 echo -e "${CYAN}╚════════════════════════════════════╝${NC}\n"
-toilet -f term " 10 Random Auto Themes" -F border --metal
+toilet -f term " 10 Random Automatic Themes" -F border --metal
 # Input nama
 
 if [[ -f "$NAME_FILE" ]]; then
@@ -46,6 +46,9 @@ fi
 echo "$USER_NAME" > "$NAME_FILE"
 
 cat > "$BANNER_FILE" <<'EOF'
+EOF
+
+chmod +x "$BANNER_FILE"
 # ~/.config/termux-banner.sh
 # Prints a random colorful ASCII banner on interactive shells.
 
