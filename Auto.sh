@@ -25,7 +25,7 @@ clear
 echo -e "${CYAN}╔════════════════════════════════════╗${NC}"
 echo -e "${CYAN}║   TERMUX THEMA STYLING V 0.3    ║${NC}"
 echo -e "${CYAN}╚════════════════════════════════════╝${NC}\n"
-toilet -f future " Ada 10 Thema Automatis" -F border --metal
+toilet -f term " 10 Random Auto Themes" -F border --metal
 # Input nama
 
 if [[ -f "$NAME_FILE" ]]; then
