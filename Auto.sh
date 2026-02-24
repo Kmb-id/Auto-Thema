@@ -23,9 +23,9 @@ NC='\033[0m'
 
 clear
 echo -e "${CYAN}╔════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║  ⚙️ TERMUX THEMA STYLING V 0.3  🛠️  ║${NC}"
+echo -e "${CYAN}║  ⚙️ TERMUX THEMA STYLING V 0.3  🛠️   ║${NC}"
 echo -e "${CYAN}╚════════════════════════════════════╝${NC}\n"
-toilet -f term " 10 Random Automatic Themes" -F border --metal
+toilet -f term " 10 Random Automatic Themes " -F border --metal
 # Input nama
 
 if [[ -f "$NAME_FILE" ]]; then
@@ -46,9 +46,6 @@ fi
 echo "$USER_NAME" > "$NAME_FILE"
 
 cat > "$BANNER_FILE" <<'EOF'
-EOF
-
-chmod +x "$BANNER_FILE"
 # ~/.config/termux-banner.sh
 # Prints a random colorful ASCII banner on interactive shells.
 
@@ -135,7 +132,7 @@ ART
 }
 
 banner_hydrag() {
-cat <<"ART"
+cat <<'ART'
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⡼⠀⢀⡀⣀⢱⡄⡀⠀⠀⠀⢲⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⡿⠛⠋⠁⣤⣿⣿⣿⣧⣷⠀⠀⠘⠉⠛⢻⣷⣿⣽⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⢀⣴⣞⣽⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠠⣿⣿⡟⢻⣿⣿⣇⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣟⢦⡀⠀⠀⠀⠀⠀⠀
@@ -177,7 +174,10 @@ cat <<'ART'
 ⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⣿⣶⣤⣤⣼⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣶⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠉⠿⢻⠿⣿⠿⠻⣿⠿⡏⠻⠏⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠉⠿⢻⠿⣿⠿⠻⣿⠿⡏⠻⠏⠛⠀⠀⠀⠀⠀
+ART
+}
+⠀⠀⠀⠀⠀⠀⠀
 banner_skull() {
 cat <<'ART'
 ⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣶⣶⣶⣿⣿⣿⣷⣶⣶⣶⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀
@@ -392,5 +392,9 @@ $MARK
 EOF
 fi
 
-echo "✅ Banner + tanggal + nama (${USER_NAME}) terpasang!"
-echo "Buka ulang Termux untuk melihat hasil."
+echo
+echo -e "✅ Banner "
+echo -e "✅ Date Info "
+echo -e "✅ Nickname : \e[92m(${USER_NAME})"
+echo
+echo -e "\e[93m Buka ulang Termux untuk melihat hasil.\e[00m"
